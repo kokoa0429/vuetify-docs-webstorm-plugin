@@ -1,12 +1,12 @@
 <idea-plugin>
   <id>com.your.company.unique.plugin.id</id>
   <name>Vuetify documentation link</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">kokoa0429</vendor>
+  <version>1.1</version>
+  <vendor email="kokoa@ciebus.net" url="https://github.com/kokoa0429">kokoa0429</vendor>
 
-  <description>dhqw809dh0qh0doihwqodhqi0owhdoiqwhoidhqoiwhdoiqwhiohidoq</description>
+  <description>This plugin can see the documentation for Vuetify tags</description>
 
-  <change-notes>j93-jfdqnjopiwdjqpodjopwqjdowjodjwojdowjodjowjdo-9j3f92j9fj39</change-notes>
+  <change-notes>This plugin can see the documentation for Vuetify tags. First implementation, Add google search option</change-notes>
 
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
@@ -24,6 +24,10 @@
     <!-- Add your actions here -->
     <action id="DocsKeyPressed" class="DocsKeyPressed" text="DocsKeyPressed">
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt B"/>
+    </action>
+    <action id="SelectGoogle" class="SelectGoogle" text="Guguru">
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift alt G"/>
     </action>
   </actions>
 

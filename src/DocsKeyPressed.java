@@ -16,13 +16,10 @@ public class DocsKeyPressed extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        // TODO: insert action logic here
         Editor editor = FileEditorManager.getInstance(e.getProject()).getSelectedTextEditor();
         VirtualFile file = FileDocumentManager.getInstance().getFile(editor.getDocument());
         int offset = editor.getCaretModel().getOffset();
-
         PsiElement element = PsiManager.getInstance(e.getProject()).findFile(file).findElementAt(offset);
-
         Pattern p = Pattern.compile("^v-");
         Matcher m = p.matcher(element.getText());
         if(m.find()){
